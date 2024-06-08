@@ -26,11 +26,11 @@ if __name__ == "__main__":
         json_dict = json.load(fp)
         print (json_dict)
 
-        tar_filelist.append(os.path.join("_data/models/blobs", json_dict['config']['digest']))
-        tar_filelist.append(os.path.join("_data/models/blobs", json_dict['layers'][0]['digest']))
-        tar_filelist.append(os.path.join("_data/models/blobs", json_dict['layers'][1]['digest']))
-        tar_filelist.append(os.path.join("_data/models/blobs", json_dict['layers'][2]['digest']))
-        tar_filelist.append(os.path.join("_data/models/blobs", json_dict['layers'][3]['digest']))
+        tar_filelist.append(os.path.join("_data/models/blobs", json_dict['config']['digest'].replace(":","-")))
+        tar_filelist.append(os.path.join("_data/models/blobs", json_dict['layers'][0]['digest'].replace(":","-")))
+        tar_filelist.append(os.path.join("_data/models/blobs", json_dict['layers'][1]['digest'].replace(":","-")))
+        tar_filelist.append(os.path.join("_data/models/blobs", json_dict['layers'][2]['digest'].replace(":","-")))
+        tar_filelist.append(os.path.join("_data/models/blobs", json_dict['layers'][3]['digest'].replace(":","-")))
 
         print (tar_filelist)
 
